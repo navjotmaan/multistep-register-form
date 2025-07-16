@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(resources/blur-radial.png);
+    background-color: #121826;
+    background-repeat: no-repeat;
+    background-position: 200px -150px;
+    background-size: 500px 500px;
+    color: #E5E7EB;
+}
+
+
+.form-container{
+    background-color: #212936;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 16px;
+    width: 400px;
+}
+
+.form-container h1{
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+label{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #4B5563;
+    border-radius: 8px;
+    background-color: #212936;
+    color: #E5E7EB;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #9CA3AF;
+}
+
+button{
+    width: 50%;
+    margin: 20px auto 0;
+    display: block;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+}
+
+.step-indicator{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #9CA3AF;
+    padding: 10px;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: 6px;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #374151;
+}
+
+.dot.active{
+    background-color: #652cd1
+}
+
+.checkbox-btn{
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.checkbox-btn input{
+    display: none;
+}
+
+.checkbox-btn span{
+    display: block;
+    padding: 16px 20px;
+    border-radius: 10px;
+    background-color: #394150;
+    color: #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+/* Highlight when selected */
+.checkbox-btn input:checked + span {
+  background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+  color: white;
+}
+
+.summary-box{
+    text-align: left;
+    background-color: transparent;
+    padding: 20px;
+    color:  #aaafb9;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.summary-box ul{
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #E5E7EB;
+}
+
+#topics{
+    margin-top: 20px;
+}
+
+#summaryName, #summaryEmail {
+    color: #E5E7EB;
+}
+
+.form-step{
+    display: none;
+}
+
+.form-step.active{
+    display: block;
+}
+
+.wrapper{
+    text-align: center;
+}
+

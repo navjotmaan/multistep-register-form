@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Multi-step Register Form | devChallenges.io</title>
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    <form class="form-container">
+
+      <!-- STEP1 -->
+      <div class="form-step active">
+        <h1>Register</h1>
+
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Example@gmail.com" required>
+
+        <button type="button" onclick="nextStep()">Continue</button>
+      </div>
+      
+      <!-- STEP2 -->
+      <div class="form-step">
+        <h1>Which topics are you interested in?</h1>
+
+       <div class="checkbox-group">
+        <label class="checkbox-btn">
+          <input type="checkbox" name="topics" value="Software Development">
+          <span>Software Development</span>
+        </label>
+
+        <label class="checkbox-btn">
+          <input type="checkbox" name="topics" value="User Experience">
+          <span>User Experience</span>
+        </label>
+
+        <label class="checkbox-btn">
+          <input type="checkbox" name="topics" value="Graphic Design">
+          <span>Graphic Design</span>
+        </label>
+       </div>
+
+       <button type="button" onclick="nextStep()">Continue</button>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="form-step">
+        <h1>Summary</h1>
+        
+        <div class="summary-box">
+          <p>Name: <strong><span id="summaryName"></span></strong></p>
+          <p>Email: <strong><span id="summaryEmail"></span></strong></p>
+          <p id="topics">Topics: </p>
+          <strong><ul id="summaryTopics"></ul></strong>
+        </div>
+
+       <button type="button" onclick="nextStep()">Continue</button>
+      </div>
+    </form>
+
+    
+      <div class="step-indicator" id="stepIndicator">
+        Step 2 of 3
+        <div class="dots">
+          <div class="dot"></div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div> 
+
+      <!-- SUCCESS MESSAGE -->
+      <div id="successMessage" class="form-step">
+      <h1>🎉 Registration Complete!</h1>
+      </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

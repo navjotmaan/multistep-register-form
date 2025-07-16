@@ -1,6 +1,6 @@
 # DevChallenges.io - Multi-step Register Form
 
-![Thumbnail for the Multi-step Register Form coding challenge](./thumbnail.jpg)
+[see the demo here](https://navjotmaan.github.io/multistep-register-form/)
 
 ## Welcome! 👋
 
